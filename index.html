@@ -55,6 +55,22 @@
     <p class="name"></p>
   </div>
 
-  
+  <script>
+   fetch(
+        'https://nduunq5gdc4bye6wrooj3akbaa0gmchp.lambda-url.us-east-2.on.aws?searchTerm=americ',
+        {
+          method: 'GET',
+          headers: {
+            Authorization:
+              'AWS4-HMAC-SHA256 Credential=AKIAU6GDV5ZGR4EKC573/20250830/us-east-2/lambda/aws4_request, SignedHeaders=host;x-amz-date, Signature=47066113c6eb5018efc8e55830fbfed8eddd06f1b35d56e05a412977b935a44e',
+            'X-Amz-Date': '20250830T093426Z',
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log({ data });
+        });
+  </script>
 </body>
 </html>
